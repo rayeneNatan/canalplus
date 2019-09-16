@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ContractMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">canalplus-test-automation</a> &gt; <a href="index.source.html" class="el_package">com.canalplus.blueprint.mapper</a> &gt; <span class="el_source">ContractMapperImpl.java</span></div><h1>ContractMapperImpl.java</h1><pre class="source lang-java linenums">package com.canalplus.blueprint.mapper;
+
+import com.canalplus.blueprint.domain.Contract;
+import com.canalplus.blueprint.dto.ContractDTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2019-09-16T02:37:48+0200&quot;,
+    comments = &quot;version: 1.1.0.Final, compiler: javac, environment: Java 1.8.0_191 (Oracle Corporation)&quot;
+)
+@Component
+<span class="nc" id="L17">public class ContractMapperImpl implements ContractMapper {</span>
+
+    @Autowired
+    private SubscriberMapper subscriberMapper;
+
+    @Override
+    public ContractDTO toDto(Contract contract) {
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        if ( contract == null ) {</span>
+<span class="nc" id="L25">            return null;</span>
+        }
+
+<span class="nc" id="L28">        ContractDTO contractDTO = new ContractDTO();</span>
+
+<span class="nc" id="L30">        contractDTO.setIdContract( contract.getIdContract() );</span>
+<span class="nc" id="L31">        contractDTO.setName( contract.getName() );</span>
+<span class="nc" id="L32">        contractDTO.setSubscriber( subscriberMapper.toDto( contract.getSubscriber() ) );</span>
+<span class="nc" id="L33">        contractDTO.setCreateDate( contract.getCreateDate() );</span>
+
+<span class="nc" id="L35">        return contractDTO;</span>
+    }
+
+    @Override
+    public Contract toModel(ContractDTO contractDTO) {
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        if ( contractDTO == null ) {</span>
+<span class="nc" id="L41">            return null;</span>
+        }
+
+<span class="nc" id="L44">        Contract contract = new Contract();</span>
+
+<span class="nc" id="L46">        contract.setIdContract( contractDTO.getIdContract() );</span>
+<span class="nc" id="L47">        contract.setName( contractDTO.getName() );</span>
+<span class="nc" id="L48">        contract.setSubscriber( subscriberMapper.toModel( contractDTO.getSubscriber() ) );</span>
+<span class="nc" id="L49">        contract.setCreateDate( contractDTO.getCreateDate() );</span>
+
+<span class="nc" id="L51">        return contract;</span>
+    }
+
+    @Override
+    public List&lt;ContractDTO&gt; toDto(List&lt;Contract&gt; contracts) {
+<span class="nc bnc" id="L56" title="All 2 branches missed.">        if ( contracts == null ) {</span>
+<span class="nc" id="L57">            return null;</span>
+        }
+
+<span class="nc" id="L60">        List&lt;ContractDTO&gt; list = new ArrayList&lt;ContractDTO&gt;();</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">        for ( Contract contract : contracts ) {</span>
+<span class="nc" id="L62">            list.add( toDto( contract ) );</span>
+<span class="nc" id="L63">        }</span>
+
+<span class="nc" id="L65">        return list;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

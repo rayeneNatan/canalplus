@@ -1,0 +1,50 @@
+ {
+	"idContract": 1,
+	"name": "contrat tv",
+	"subscriber": {
+		"id": 2,
+		"username": "advisor",
+		"lastName": "advisor",
+		"email": "advisor@gmail.com",
+		"password": "PASSWORD",
+		"address": {
+			"addressID": 1,
+			"country": "France",
+			"state": "belge",
+			"street": "saint bernard",
+			"city": "Paris",
+			"zip": "75",
+			"number": 22,
+			"active": false,
+			"type": "PRINCIPAL"
+		},
+		"advisor": {
+			"advisorID": 2,
+			"username": "Arnaud",
+			"lastName": null,
+			"email": "Arnaud.elot@gmail.com",
+			"password": "password",
+			"canal": "FACE",
+			"createDate": "2019-09-16T00:00:00"
+		},
+		"movements": [
+			{
+				"mvmtID": 1,
+				"value": "Address:ariana, Number:22, City:ariana, State:Tunis, Postal Code:2083",
+				"movementType": "ADRESS_CHANGE",
+				"advisor": {
+					"advisorID": 2,
+					"username": "Arnaud",
+					"lastName": null,
+					"email": "Arnaud.elot@gmail.com",
+					"password": "password",
+					"canal": "FACE",
+					"createDate": "2019-09-16T00:00:00"
+				},
+				"modifDate": "2019-09-16T01:44:32.139"
+			}
+		],
+		"createDate": "2019-09-10T00:00:00"
+	},
+	"createDate": "2019-09-16T00:00:00"
+}

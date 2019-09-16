@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ContractServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">canalplus-test-automation</a> &gt; <a href="index.source.html" class="el_package">com.canalplus.blueprint.service</a> &gt; <span class="el_source">ContractServiceImpl.java</span></div><h1>ContractServiceImpl.java</h1><pre class="source lang-java linenums">package com.canalplus.blueprint.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.canalplus.blueprint.domain.Contract;
+import com.canalplus.blueprint.dto.ContractDTO;
+import com.canalplus.blueprint.mapper.ContractMapper;
+import com.canalplus.blueprint.repository.ContractRepository;
+
+@Service
+@Transactional
+<span class="nc" id="L19">public class ContractServiceImpl implements ContractService {</span>
+
+<span class="nc" id="L21">    protected final Logger logger = LogManager.getLogger(getClass());</span>
+
+    @Autowired
+    private ContractRepository contractRepository;
+
+    @Autowired
+    ContractMapper contractMapper;
+
+    @Override
+    public List&lt;ContractDTO&gt; findBySubscriberId(Long id) {
+<span class="nc" id="L31">	List&lt;Contract&gt; contracts = contractRepository.findBySubscriberId(id);</span>
+<span class="nc" id="L32">	return contractMapper.toDto(contracts);</span>
+    }
+
+    
+   
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,0 +1,27 @@
+{
+    "username": "name",
+    "lastName": "lastName",
+    "email": "email",
+    "password": "password",
+    "address": {
+        "country": "France",
+        "state": "France",
+        "street": "voltaire",
+        "city": "Paris",
+        "number": 22,
+        "zip": "75",
+        "active": true,
+        "type": "PRINCIPAL"
+    },
+    "advisor": {
+        "advisorID": 3,
+        "username": "advisorName",
+        "lastName": "advisorLastName",
+        "email": "advisorEmail",
+        "password": "password",
+        "canal": "FACE",
+        "createDate": "2019-09-13T22:10:04.224"
+    },
+    "movements": [],
+    "createDate": "2019-09-13T22:10:04.223"
+}

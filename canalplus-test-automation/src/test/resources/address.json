@@ -1,0 +1,11 @@
+{
+	"country":"France",
+	"state":"belge",
+	"street":"saint bernard",
+	"city":"Paris",
+	"zip": "75",
+	"number":22,
+	"active": false,
+	"type":"PRINCIPAL"
+
+}
