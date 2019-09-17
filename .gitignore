@@ -9,3 +9,6 @@
 
 # Package Files #
 *.jar
+
+/target/*
+/indexpath/
